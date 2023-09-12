@@ -9,6 +9,7 @@ import Button from '../../components/Button/index'
 
 
 export default function SignIn() {
+    
     return (
         <C.Container>
             <C.Header>
@@ -23,10 +24,10 @@ export default function SignIn() {
                 <C.ContentHeaderSubtitle>If you need any support click here</C.ContentHeaderSubtitle>
             </C.ContentHeader>
             <C.ContentInput>
-                <C.InputGroup>
+                <C.InputGroup >
                     <C.Input  placeholderTextColor='#757575' placeholder='Enter Username Or Email'/>
                 </C.InputGroup>
-                <C.InputGroup>
+                <C.InputGroup >
                     <C.Input  placeholderTextColor='#757575' placeholder='Password'/>
                     <EyeSlash size={32} color='#757575' weight='light'/>
                 </C.InputGroup>
@@ -64,3 +65,4 @@ export default function SignIn() {
         </C.Container>
     )
 }
+

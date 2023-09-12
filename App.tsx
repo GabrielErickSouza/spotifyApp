@@ -1,15 +1,16 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import GetStarted from './src/screens/GetStarted'
-import Logon from './src/screens/Logon'
-import SignIn from './src/screens/SignIn'
+import {ThemeProvider} from 'styled-components'
+import Themes from './src/theme'
+import StackComponent from './src/routes/stack'
 
 export default function App() {
+    const theme = Themes['dark'] || Themes['darkgetstarted']
     return (
-        <>
-            <SignIn />
+        <ThemeProvider theme={theme}>
+            <StackComponent/>
             <StatusBar style="light" translucent />
-        </>
+        </ThemeProvider>
     )
 }
 

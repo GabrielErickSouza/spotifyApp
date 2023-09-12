@@ -6,8 +6,11 @@ import women from '../../assets/women.png'
 import stripes from '../../assets/stripes.png'
 import stripesLine from '../../assets/stripesLine.png'
 import Button from '../../components/Button'
+import { useNavigation } from '@react-navigation/native'
+import { StackTypes } from '../../routes/stack'
 
 export default function Logon() {
+    const navigation = useNavigation<StackTypes>()
     return (
         <C.Container>
             <C.Header>
@@ -44,6 +47,7 @@ export default function Logon() {
                         fontSize={19}
                         lineHeight={26}
                         fontWeight={700}
+                        onPress={()=> navigation.navigate('SignIn')}
                     />
                     
                 </C.ContainerButtons>

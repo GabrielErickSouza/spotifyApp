@@ -1,9 +1,9 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.View({
+export const Container = styled.View(props =>({
     flex: 1,
-    backgroundColor: '#1C1B1B'
-})
+    backgroundColor: props.theme.background
+}))
 
 export const Header = styled.View({
     flexDirection: 'row',
@@ -34,7 +34,7 @@ export const ContentHeader = styled.View({
 export const ContentHeaderTitle = styled.Text({
     color: '#F2F2F2',
     fontSize: 20,
-    lineHeight: 40,
+    lineHeight: '40px',
     fontWeight: 700
 })
 export const ContentHeaderSubtitle = styled.Text({
@@ -54,17 +54,18 @@ export const ContentInput = styled.View({
 export const InputGroup = styled.View({
     width: '100%',
     paddingHorizontal: 27,
-    height: 80,
+    paddingRight: 50,
     borderWidth: 1,
-    borderColor: '#757575',
+    borderColor:'#757575',
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexDirection: 'row'
+    flexDirection: 'row',
 })
 
 export const Input = styled.TextInput({
-    height: '100%',
+    height: 80,
+    width:'100%',
     color: '#F2F2F2'
 })
 
@@ -115,3 +116,4 @@ export const FooterText = styled.Text({
     alignSelf: 'center',
     paddingTop: 15
 })
+
