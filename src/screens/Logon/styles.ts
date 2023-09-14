@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View(props =>({
     flex: 1,
-    backgroundColor: props.theme.background
+    backgroundColor: props.theme.styles.backgroundColor
 }))
 
 export const Header = styled.View({

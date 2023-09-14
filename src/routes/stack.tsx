@@ -19,8 +19,8 @@ export type StackTypes = NativeStackNavigationProp<StackNavigation>
 export default function StackComponent() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name='GetStarted' component={GetStarted}/>
+            <Stack.Navigator screenOptions={{headerShown:false}}>
+                <Stack.Screen name='GetStarted' component={GetStarted} options={{}}/>
                 <Stack.Screen name='Logon' component={Logon}/>
                 <Stack.Screen name='SignIn' component={SignIn}/>
             </Stack.Navigator>

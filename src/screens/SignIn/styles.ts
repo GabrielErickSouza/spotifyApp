@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View(props =>({
     flex: 1,
-    backgroundColor: props.theme.background
+    backgroundColor: props.theme.styles.background
 }))
 
 export const Header = styled.View({
@@ -51,17 +51,17 @@ export const ContentInput = styled.View({
     gap: 16
 })
 
-export const InputGroup = styled.View({
+export const InputGroup = styled.View<{ hasFocus:boolean }>(props=>({
     width: '100%',
     paddingHorizontal: 27,
     paddingRight: 50,
     borderWidth: 1,
-    borderColor:'#757575',
+    borderColor:props.hasFocus === true?'#fff':'#757575',
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-})
+}))
 
 export const Input = styled.TextInput({
     height: 80,

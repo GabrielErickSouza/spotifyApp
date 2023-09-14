@@ -14,7 +14,7 @@ export default function Logon() {
     return (
         <C.Container>
             <C.Header>
-                <C.ButtonHeader>
+                <C.ButtonHeader onPress={()=> navigation.navigate('GetStarted')}>
                     <CaretLeft  color="#DDDDDD"/>
                 </C.ButtonHeader>
             </C.Header>
@@ -23,33 +23,8 @@ export default function Logon() {
                 <C.ContentTextTitle>Enjoy listening to music</C.ContentTextTitle> 
                 <C.ContentTextSubTitle>Spotify is a proprietary sweedish audio and media services</C.ContentTextSubTitle> 
                 <C.ContainerButtons>
-                    <Button
-                        text='Register'
-                        width={147} 
-                        height={73} 
-                        backgroundColor='#42C83C' 
-                        borderRadius={30}
-                        alignItems='center'
-                        justifyContent='center'
-                        color='#ffffff'
-                        fontSize={19}
-                        lineHeight={26}
-                        fontWeight={700}
-                    />
-                    <Button
-                        text='Sign up'
-                        width={147} 
-                        height={73}  
-                        borderRadius={30}
-                        alignItems='center'
-                        justifyContent='center'
-                        color='#ffffff'
-                        fontSize={19}
-                        lineHeight={26}
-                        fontWeight={700}
-                        onPress={()=> navigation.navigate('SignIn')}
-                    />
-                    
+                    <Button  text='Register'/>
+                    <Button disabledBg={true} text='Sign up' onPress={()=> navigation.navigate('SignIn')}/>
                 </C.ContainerButtons>
             </C.Content>
             <C.Image top={300} source={women}/>

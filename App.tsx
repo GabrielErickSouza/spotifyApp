@@ -5,7 +5,7 @@ import Themes from './src/theme'
 import StackComponent from './src/routes/stack'
 
 export default function App() {
-    const theme = Themes['dark'] || Themes['darkgetstarted']
+    const theme = Themes 
     return (
         <ThemeProvider theme={theme}>
             <StackComponent/>

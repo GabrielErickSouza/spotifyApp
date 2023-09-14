@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View(props =>({
     flex: 1,
-    backgroundColor: props.theme.backgroundColor,
+    backgroundColor: props.theme.styles.backgroundColor,
     alignItems: 'center'
 }))
 
@@ -30,5 +30,6 @@ export const ContentTextTwo = styled.Text({
     lineHeight:'22px',
     fontWeight:400,
     textAlign:'center',
-    marginTop:21
+    marginTop:21,
+    marginBottom:27
 })
