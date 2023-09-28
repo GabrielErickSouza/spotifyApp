@@ -1,6 +1,5 @@
 import * as C from './styles'
 import React from 'react'
-import { CaretLeft } from 'phosphor-react-native'
 import Spotify from '../../assets/spotify.svg'
 import women from '../../assets/women.png'
 import stripes from '../../assets/stripes.png'
@@ -8,15 +7,14 @@ import stripesLine from '../../assets/stripesLine.png'
 import Button from '../../components/Button'
 import { useNavigation } from '@react-navigation/native'
 import { StackTypes } from '../../routes/stack'
+import ButtonBack from '../../components/ButtonBack'
 
 export default function Logon() {
     const navigation = useNavigation<StackTypes>()
     return (
         <C.Container>
             <C.Header>
-                <C.ButtonHeader onPress={()=> navigation.navigate('GetStarted')}>
-                    <CaretLeft  color="#DDDDDD"/>
-                </C.ButtonHeader>
+                <ButtonBack  onPress={()=> navigation.navigate('GetStarted')}/>
             </C.Header>
             <C.Content>
                 <Spotify width={235} height={75}/>

@@ -10,9 +10,9 @@ export const Button = styled.TouchableOpacity<{disabledBg:boolean}>(props=>({
     justifyContent:'center',
 }))
 
-export const TextButton = styled.Text({
-    color:'#F6F6F6',
+export const TextButton = styled.Text(props=>({
+    color:props.theme.styles.textButton,
     fontSize:22,
     fontWeight:700,
     lineHeight:'29px'
-})
+}))

@@ -10,14 +10,14 @@ export const Header = styled.View({
     paddingHorizontal: 30
 })
 
-export const ButtonHeader = styled.TouchableOpacity({
+export const ButtonHeader = styled.TouchableOpacity(props =>({
     width: 32,
     height: 32,
-    backgroundColor: 'rgba(255,255,255,0.03)',
+    backgroundColor: props.theme.styles.backgroundButtonHeader,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center'
-})
+}))
 
 export const Content = styled.View({
     width: '100%',
@@ -28,23 +28,24 @@ export const Content = styled.View({
     zIndex: 1
 })
 
-export const ContentTextTitle = styled.Text({
-    color: '#F2F2F2',
+export const ContentTextTitle = styled.Text(props=>({
+    color: props.theme.styles.textTitle,
     fontWeight: 700,
     fontSize: 20,
     lineHeight: '35px',
     textTransform: 'capitalize',
     marginTop: 55
-})
-export const ContentTextSubTitle = styled.Text({
-    color: '#A0A0A0',
+}))
+
+export const ContentTextSubTitle = styled.Text(props=>({
+    color: props.theme.styles.subTitleLogonTitle,
     fontWeight: 400,
     fontSize: 17,
     lineHeight: '25px',
     textTransform: 'capitalize',
     marginTop: 21,
     textAlign: 'center'
-})
+}))
 export const ContainerButtons = styled.View({
     width: '100%',
     alignItems: 'center',

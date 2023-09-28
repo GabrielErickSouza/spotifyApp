@@ -5,22 +5,18 @@ export const Container = styled.View(props =>({
     backgroundColor: props.theme.styles.background
 }))
 
+export const Keyboard = styled.KeyboardAvoidingView({
+    flex:1
+})
+
 export const Header = styled.View({
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 40,
-    paddingHorizontal: 30
+    justifyContent: 'center',
+    paddingTop:30,
+    paddingHorizontal: 30,
 })
 
-export const ButtonHeader = styled.TouchableOpacity({
-    width: 32,
-    height: 32,
-    backgroundColor: 'rgba(255,255,255,0.03)',
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center'
-})
 
 export const ContentHeader = styled.View({
     width: '100%',
@@ -31,17 +27,19 @@ export const ContentHeader = styled.View({
     paddingBottom: 38,
     gap: 22
 })
-export const ContentHeaderTitle = styled.Text({
-    color: '#F2F2F2',
+
+export const ContentHeaderTitle = styled.Text(props=>({
+    color: props.theme.styles.textTitle,
     fontSize: 20,
     lineHeight: '40px',
     fontWeight: 700
-})
-export const ContentHeaderSubtitle = styled.Text({
+}))
+
+export const ContentHeaderSubtitle = styled.Text(props=>({
     fontSize: 12,
     fontWeight: 400,
-    color: '#E1E1E1'
-})
+    color: props.theme.styles.textSubTitle
+}))
 
 export const ContentInput = styled.View({
     width: '100%',
@@ -56,7 +54,7 @@ export const InputGroup = styled.View<{ hasFocus:boolean }>(props=>({
     paddingHorizontal: 27,
     paddingRight: 50,
     borderWidth: 1,
-    borderColor:props.hasFocus === true?'#fff':'#757575',
+    borderColor:props.hasFocus === true?props.theme.styles.white:props.theme.styles.borderInput,
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -90,17 +88,17 @@ export const Sepatator = styled.View({
     paddingHorizontal: 30
 })
 
-export const LineSepatator = styled.View({
+export const LineSepatator = styled.View(props=>({
     height: 1,
-    backgroundColor: '#757575',
+    backgroundColor: props.theme.styles.borderInput,
     flex: 1
-})
+}))
 
-export const SepatatorText = styled.Text({
-    color: '#fff',
+export const SepatatorText = styled.Text(props=>({
+    color: props.theme.styles.white,
     fontSize: 12,
     fontWeight: 400
-})
+}))
 
 export const SocialContainerButton = styled.View({
     flexDirection: 'row',
@@ -111,9 +109,9 @@ export const SocialContainerButton = styled.View({
     paddingTop: 20
 })
 
-export const FooterText = styled.Text({
-    color: '#DCDCDC',
+export const FooterText = styled.Text(props=>({
+    color: props.theme.styles.footerText,
     alignSelf: 'center',
     paddingTop: 15
-})
+}))
 
